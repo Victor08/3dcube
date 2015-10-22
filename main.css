@@ -33,7 +33,8 @@ BODY {
     width: 70em;
     height: 70em;
     border: 1px solid white;
-    opacity: .7;
+    opacity: 1;
+    /*backface-visibility: hidden!important;*/
 }
 
 .back {
