@@ -3,24 +3,36 @@
 <head>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script src="node_modules/rasterizehtml/dist/rasterizeHTML.allinone.js" type="text/javascript"></script>
+    <script src="jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" href="main.css">
     <meta charset=utf-8 />
     <title>JS Bin</title>
 </head>
 <body>
+<div id="btn-left"></div>
+<div id="btn-right"></div>
+<div id="btn-down"></div>
+<div id="btn-up"></div>
 <div class="container">
-    <div class="back side"></div>
-    <div class="left side">
-        <canvas id="canvas2" width="980" height="980"></canvas>
+    <div class="back side">
+        <h1>BACK</h1>
     </div>
-    <div class="right side"></div>
-    <div class="top side"></div>
+    <div class="left side">
+        <!--<canvas id="canvas2" width="980" height="980"></canvas>-->
+        <h1>LEFT</h1>
+    </div>
+    <div class="right side">
+        <h1>RIGHT</h1>
+    </div>
+    <div class="top side">
+        <h1>TOP</h1>
+    </div>
     <div class="bottom side">
-
+        <h1>BOTTOM</h1>
     </div>
     <div class="front side">
-        <canvas id="canvas1" width="980" height="980"></canvas>
-        
+        <!--<canvas id="canvas1" width="980" height="980"></canvas>-->
+        <h1>FRONT</h1>
     </div>
 </div>
 
@@ -32,5 +44,6 @@
     rasterizeHTML.drawURL('/test.html', canvas1);
     rasterizeHTML.drawURL('/test.html', canvas2);
 </script>
+<script src="main.js"></script>
 </body>
 </html>

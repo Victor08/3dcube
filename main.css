@@ -9,8 +9,10 @@ BODY {
     height: 70em;
     border: 2px dotted white;
     transform-style: preserve-3d;
-    opacity: .7;
-    animation: rotate 10s infinite linear;
+    opacity: 1;
+    /*animation: rotate 10s infinite linear;*/
+    z-index: 1;
+    transition: transform 1s ease 0s;
 }
 .container:before,
 .container:after {
@@ -46,25 +48,66 @@ BODY {
     background: gold;
 }
 .top {
-    transform: translateY(-35em) rotateX(90deg);
+    transform: translateY(-35em) rotateX(-90deg);
     background: skyblue;
 }
 .bottom {
-    transform: translateY(35em) rotateX(90deg);
+    transform: translateY(35em) rotateX(-90deg);
     background: steelblue;
 }
 .left {
-    transform: translateX(-35em) rotateY(90deg);
+    transform: translateX(-35em) rotateY(-90deg);
     background: lightgreen;
 }
 
 .right {
-    transform: translateX(35em) rotateY(90deg);
+    transform: translateX(35em) rotateY(-90deg);
     background: yellowgreen;
 }
 
-@keyframes rotate {
-    100% {
-        transform: rotateY(360deg);
-    }
+
+
+#btn-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 200px;
+    width: 100px;
+    display: block;
+    background: hotpink;
+    cursor: pointer;
+    z-index: 5;
+}
+#btn-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 200px;
+    width: 100px;
+    display: block;
+    background: hotpink;
+    cursor: pointer;
+    z-index: 5;
+}
+#btn-up {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100px;
+    width: 200px;
+    display: block;
+    background: hotpink;
+    cursor: pointer;
+    z-index: 5;
+}
+#btn-down {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 100px;
+    width: 200px;
+    display: block;
+    background: hotpink;
+    cursor: pointer;
+    z-index: 5;
 }
